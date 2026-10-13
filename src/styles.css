@@ -1,0 +1,363 @@
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    font-family: monospace;
+    min-height: 100dvh;
+}
+
+.right {
+    background: linear-gradient(315deg, #c5c2ef 0.000%, #b5b0ff 20.000%, #a19bfa 40.000%, #8a82d6 60.000%, #7067b3 80.000%, #534aa8 100.000%);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 2dvw;
+    border-radius: 30px;
+    transition:  transform 0.3s ease;
+    position: sticky;
+    top: 2dvw;
+    max-height: 90dvh;
+}
+
+.right:hover {
+   transform: scale(1.05);
+}
+
+.left {
+    width: 80%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4dvw;
+}
+
+h1 {
+    padding-top: 9vh;
+    color: #8a82d6;
+    font-size: 5dvh;
+}
+
+h4 {
+    color: grey;
+    padding-left: 4dvw;
+    font-size: small;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.content-hr {
+    width: 60dvw;
+    margin-top: 10dvh;
+    border: none;
+    height: 2px;
+    background-color: #c5c2ef;
+}
+
+.content-container {
+    color: white;
+    margin-top: 1dvh;
+}
+
+.task-view {
+    color: white;
+    padding-left: 4dvw;
+    margin-top: 2dvh;
+    text-align: center;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 3dvw;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-block: 2dvh;
+    border: 1px solid #a19bfa;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.task:hover {
+    background: linear-gradient(315deg, #c5c2ef 0.000%, #b5b0ff 20.000%, #a19bfa 40.000%, #8a82d6 60.000%, #7067b3 80.000%, #534aa8 100.000%);
+    transform: scale(1.10);
+}
+
+.tasktext {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.tasktitle {
+    font-size: larger;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 25px;
+}
+
+.taskproject {
+    font-size: 20px;
+    margin-block: 5px;
+}
+
+.taskdescription {
+    margin-left: 2dvw;
+}
+
+.taskactions {
+    display: flex;
+    margin: 5px;
+    align-items: center;
+}
+
+.priority {
+    margin-inline:10px;
+    padding-inline: 5px;
+    padding-block: 4px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.done {
+    margin: 5px;
+    color: white;
+    padding-inline: 10px;
+    padding-block: 4px;
+    border-radius: 8px;
+    transition:  transform 0.3s ease;
+}
+
+.done:hover{
+    color: rgb(0, 0, 0);
+    background-color: springgreen;
+    transform: scale(1.5);
+}
+
+.removetask {
+    margin: 5px;
+    color: white;
+    padding-inline: 10px;
+    padding-block: 4px;
+    border-radius: 8px;
+    transition:  transform 0.3s ease;
+}
+
+.removetask:hover{
+    color: rgb(0, 0, 0);
+    background-color: crimson;
+    transform: scale(1.5);
+}
+
+.addtaskbtn-container {
+    align-self: flex-end;
+    margin-top: 7dvh;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255, 0.827);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.addtaskbtn-container:hover {
+    background: linear-gradient(90deg, #05050a 0.000%, #090a0e 8.333%, #0d0e12 16.667%, #121316 25.000%, #16171a 33.333%, #1a1b1e 41.667%, #1e1f22 50.000%, #222326 58.333%, #26272a 66.667%, #292a2d 75.000%, #2c2d30 83.333%, #2e2f33 91.667%, #303135 100.000%);
+    color: rgb(255, 255, 255);
+    transform: scale(1.15);
+}
+
+#taskBtn {
+    font-family: inherit;
+    padding-inline: 3dvw;
+    padding-block: 2dvh;
+    font-size: 140%;
+    border: 0px;
+    background-color: rgba(0,0,0,0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#taskBtn:hover {
+    color: white;
+}
+
+
+.timefilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter {
+    margin-block: 10px;
+    width: 10dvw;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: #b5b0ff;
+    text-align: left;
+}
+
+
+.projects-container {
+    color: rgb(0, 0, 0);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15dvw;
+}
+
+.addproject-form {
+    display: flex;
+}
+
+.addproject-form > input {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #a19bfa;
+    border-radius: 7px;
+    min-height: 20px;
+    color: white;
+    padding-inline: 15px;
+    padding-block: 5px;
+    transition: transform 0.3s ease;
+}
+
+.addproject-form > input:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.addproject-form > input:focus, .addproject-form > textarea:focus {
+    outline: none;
+    border: 1px solid #b5b0ff;
+    box-shadow: 0 0 10px rgba(181, 176, 255, 0.5);
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.addproject-form > input::placeholder, text::placeholder {
+    font-family: monospace;
+    color: #b5b0ff;
+}
+
+
+.projectBtn{
+    padding-inline: 7px;
+    padding-block: 6px;
+    max-height: fit-content;
+    border: 1px solid #534aa8;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    align-items: flex-end;
+    font-weight: 200;
+    align-self: center;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.projectBtn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 254, 254);
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.removeProject {
+    border: none;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.removeProject:hover {
+    color: crimson;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5px;
+    padding-block: 5px;
+    border-radius: 10px;
+    transition: transform 0.1s ease;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transform: scale(1.05, 1);
+}
+
+.allprojects>ul {
+    padding: 0px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.sidebar-hr {
+    border: none;
+    height: 1px;
+    background-color: #000000;
+    width: 12dvw;
+    margin-top: 20px;
+}
+
+dialog {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 20dvw;
+}
+
+dialog > form > input, textarea, select,  button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #a19bfa;
+    border-radius: 7px;
+    min-height: 20px;
+    color: white;
+    padding-inline: 15px;
+    padding-block: 5px;
+}
+
+.btn-save-task:hover {
+    background-color: springgreen;
+    color: #000000;
+}
+
+#close-todo-modal:hover {
+    background-color: crimson;
+    color: white;
+}
+
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
